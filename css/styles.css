@@ -326,7 +326,6 @@ background-color:#F5F4FA;
 }
 
 .team-name {
-
   font-weight: 500;
   font-size: 16px;
   line-height: calc(19 / 16);
@@ -339,6 +338,32 @@ background-color:#F5F4FA;
   text-align: center;
   color: var(--text-title-color);
 }
+.socials {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.socials-link {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 44px;
+height: 44px;
+border-radius: 50%;
+background: #FFFFFF;
+fill: #AFB1B8;
+}
+
+.socials-link:hover,
+.socials-link:focus  {
+  background-color: var(--accent-color);
+  outline: 2px solid var(--accent-color);
+  outline-offset: -2px;
+  fill: #FFFFFF;
+}
+
+
 
 /**
   |============================
