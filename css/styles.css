@@ -154,6 +154,7 @@ address {
 .header-list-cont {
   display: flex;
   gap: 50px;
+  align-items: center;
 }
 .nav-link {
   display: block;
@@ -176,6 +177,7 @@ address {
 }
 
 
+
 .header-mail,
 .header-tel {
   font-weight: 500;
@@ -184,15 +186,22 @@ address {
   color: var(--text-title-color);
  margin-right: auto;
 }
-
 .header-mail:hover,
 .header-mail:focus {
   color: #2196f3;
 }
+
 .header-tel:hover,
 .header-tel:focus {
   color: var(--accent-color);
 }
+.header-icon {
+  fill: currentColor;
+ }
+ .header-group:hover,
+ .header-group:focus {
+   color: #2196f3;
+ }
 
 /**
   |============================
@@ -343,6 +352,7 @@ background-color:#F5F4FA;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  margin-top: 16px;
 }
 .socials-link {
 display: flex;
@@ -362,14 +372,50 @@ fill: #AFB1B8;
   outline-offset: -2px;
   fill: #FFFFFF;
 }
+/**
+  |============================
+  | Постійні клієнти
+  |============================
+*/
+.container-clients {
 
+}
+.clients-title {
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  display: block;
+  margin-bottom: 50px;
+}
+.clients-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  fill:#AFB1B8;
+}
+.clients-item {
+  border: 1px solid #AFB1B8;
+border-radius: 4px;
+width: 170px;
+height: 92px;
+display:flex;
+justify-content: center;
+  align-items: center;
+}
+.clients-item:hover,
+.clients-item:focus {
+  border: 1px solid #2196F3;
+  fill: var(--accent-color);
 
+}
 
 /**
   |============================
   | Підвал
   |============================
 */
+
+
 .footer {
   background: #2f303a;
   padding: 60px 0;
@@ -406,6 +452,10 @@ fill: #AFB1B8;
   line-height: calc(24 / 14);
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
+}
+.socials-footer {
+  display:flex;
+  gap: 10px;
 }
 
 /*-------Портфоліо--*/
