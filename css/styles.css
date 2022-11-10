@@ -178,29 +178,25 @@ address {
 
 
 
-.header-mail,
-.header-tel {
+.auth-link {
+  display: flex;
+  align-content: center;
   font-weight: 500;
   line-height: calc(16 / 12);
   letter-spacing: 0.02em;
   color: var(--text-title-color);
  margin-right: auto;
-}
-.header-mail:hover,
-.header-mail:focus {
-  color: #2196f3;
-}
+ gap: 10px;
+ justify-content: center;
+  align-items: center;
 
-.header-tel:hover,
-.header-tel:focus {
-  color: var(--accent-color);
+}
+.auth-link:hover,
+.auth-link:focus {
+  color: #2196F3;
 }
 .header-icon {
   fill: currentColor;
- }
- .header-group:hover,
- .header-group:focus {
-   color: #2196f3;
  }
 
 /**
@@ -217,11 +213,10 @@ address {
   text-align: center;
   padding-top : 200px;
   padding-bottom: 200px;
-  background-image: url(../img/Img-hero.jpg);
     background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
-background-image: linear-gradient(rgba(47, 48, 58, 0.4));
+background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/Img-hero.jpg);
 }
 
 .hero-title {
@@ -265,6 +260,18 @@ background-image: linear-gradient(rgba(47, 48, 58, 0.4));
 .about {
   padding-bottom: 0px;
 }
+.about-img {
+  background: #F5F4FA;
+  border-radius: 4px;
+  width: 270px;
+  height: 120px;
+   margin-bottom: 30px;
+   display: flex;
+   justify-content: center;
+align-items: center;
+}
+
+
 .about-list {
   display: flex;
   align-items: center;
@@ -274,13 +281,13 @@ background-image: linear-gradient(rgba(47, 48, 58, 0.4));
 
 .about-tittle {
   width: 270px;
-  height: 98px;
+
 }
 
 .about-sub-tittle {
   font-size: 14px;
   line-height: calc(16 / 14);
-  margin-bottom: 10px;
+
 }
 .about-description {
   line-height: 24px;
@@ -420,6 +427,14 @@ justify-content: center;
   background: #2f303a;
   padding: 60px 0;
 }
+.footer-container {
+  display: flex;
+
+}
+.footer-address {
+
+}
+
 
 .logo-footer {
   font-family: 'Raleway';
@@ -436,6 +451,7 @@ justify-content: center;
 }
 .address {
  margin-top: 20px;
+
 }
 .address-list {
   display: flex;
@@ -453,10 +469,26 @@ justify-content: center;
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
 }
+
+
 .socials-footer {
-  display:flex;
+display: flex;
   gap: 10px;
 }
+.footer-socials-wrapper {
+  display: block;
+
+}
+.footer-title {
+  color: #FFFFFF;
+  flex-direction: column;
+
+  margin-bottom: 50px;
+}
+
+
+
+
 
 /*-------Портфоліо--*/
 /*-------Фільтри--*/
