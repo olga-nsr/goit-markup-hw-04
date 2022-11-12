@@ -1,5 +1,6 @@
 :root {
   --main-title-color: #ffffff;
+  --background-main-color: #ffffff;
   --sacondary-title-color: #212121;
   --text-title-color: #757575;
   --accent-color: #2196f3;
@@ -125,7 +126,7 @@ address {
 }
 
 .header {
-  background-color: var(--main-title-color);
+  background-color: var(--background-main-color);
   border: 1px solid #ECECEC;
 }
 .header-nav {
@@ -260,26 +261,17 @@ background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
 .about {
   padding-bottom: none;
 }
-.about-tittle::before {
+.about-tittle-img{
   content: "";
-  display: block;
+  display: flex;
   height: 120px;
- background-size: content;
+  align-items: center;
+  justify-content: center;
+
 background-repeat: no-repeat;
 background-position: center;
 background-color:#F5F4FA;
-}
-.about-tittle:nth-child(1):before {
-  background-image: url('../img/antenna.png');
-}
-.about-tittle:nth-child(2):before {
-  background-image: url('../img/clock.png');
-}
-.about-tittle:nth-child(3):before {
-  background-image: url('../img/diagram.png');
-}
-.about-tittle:nth-child(4):before {
-  background-image: url('../img/astronaut.png');
+border-radius: 4px;
 }
 
 .about-list {
@@ -344,6 +336,9 @@ background-color:#F5F4FA;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+.card-set-items {
+  background: var(--background-main-color);
+}
 
 .team-name {
   font-weight: 500;
@@ -372,25 +367,22 @@ align-items: center;
 width: 44px;
 height: 44px;
 border-radius: 50%;
-background: #FFFFFF;
+background: var(--background-mail-color);
 fill: #AFB1B8;
 }
 
 .socials-link:hover,
 .socials-link:focus  {
   background-color: var(--accent-color);
-  outline: 2px solid var(--accent-color);
-  outline-offset: -2px;
-  fill: #FFFFFF;
+
+  fill: var(--main-title-color);
 }
 /**
   |============================
   | Постійні клієнти
   |============================
 */
-.container-clients {
 
-}
 .clients-title {
   font-size: 36px;
   line-height: calc(42 / 36);
@@ -402,22 +394,25 @@ fill: #AFB1B8;
   display: flex;
   align-items: center;
   gap: 30px;
-  fill:#AFB1B8;
+
 }
-.clients-item {
+.clients-item{
+  width: 100%;
+  height: 100%;
   border: 1px solid #AFB1B8;
+}
+.clients-link {
 border-radius: 4px;
-width: 170px;
-height: 92px;
-display:flex;
+display: flex;
 justify-content: center;
   align-items: center;
+  fill:#AFB1B8;
 }
-.clients-item:hover,
-.clients-item:focus {
+
+.clients-link:hover,
+.clients-link:focus {
   border: 1px solid #2196F3;
   fill: var(--accent-color);
-
 }
 
 /**
@@ -431,8 +426,14 @@ justify-content: center;
   background: #2f303a;
   padding: 60px 0;
 }
-
-
+.footer-container{
+  display: flex;
+  align-items: baseline;
+}
+.footer-address{
+  min-width: 31px;
+  margin-right: 70px;
+}
 .logo-footer {
   font-family: 'Raleway';
   font-style: normal;
@@ -461,6 +462,13 @@ justify-content: center;
   line-height: calc(24 / 14);
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
+}
+.footer-address:hover,
+.footer-address:focus {
+  color: var(--accent-color);
+}
+.footer-socials {
+
 }
 .socials-footer-dark {
 display: flex;
@@ -505,7 +513,6 @@ justify-content: center;
    gap: 8px;
 margin-bottom: 50px;
 }
-
 .button {
   min-width: 125px;
   min-height: 38px;
@@ -515,13 +522,12 @@ margin-bottom: 50px;
   border-style: none;
   cursor: pointer;
   border-radius: 4px;
-
 }
 .button:hover,
 .button:focus {
   background-color: var(--accent-color);
   color: var(--main-title-color);
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .active-btn {
   min-width: 72px;
@@ -533,19 +539,20 @@ margin-bottom: 50px;
   border-radius: 4px;
 }
 
-.portfolio-wrapper{
+.portfolio-wrapper {
   border:1px solid #EEEEEE;
   padding: 20px 24px;
 }
-.portfolio-activ {
+
+.card-set-item:hover,
+.card-set-item:focus {
+
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 
 }
 .title-portfolio {
   margin-bottom: 4px;
-  ;
-
-  font-size: 18px;
+    font-size: 18px;
   line-height: calc(36 / 18);
 
 }
@@ -554,7 +561,4 @@ margin-bottom: 50px;
   line-height: calc(30 / 16);
   color: var(--text-title-color);
 }
-.footer-address:hover,
-.footer-address:focus {
-  color: var(--accent-color);
-}
+
